@@ -1,0 +1,89 @@
+<html lang="en" dir="ltr">
+ <head>
+	<style>
+	body
+	{
+		background-image : url("https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png");
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+	}
+	h1
+	{
+	  color:green;
+	  font-family:cambria;
+	  font-weight:bold;
+	  text-align : center;
+	  text-decoration:underline;
+	  <!--background-color:skyblue;-->
+	}
+   @media screen and (max-width:2000px){
+   .div2
+   {
+	  text-align : center;
+	  text-color:white;
+	  font-size:25px;
+	  font-family:sans;
+   }}
+	</style>
+	<meta charset="utf-8">
+	<title>First Innings Score Predictor</title>
+	<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="{{url_for('static',filename='dark-mode.css')}}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>IPL Score Prediction</title>
+<body>
+<div class="dh ">
+<br><br>
+<h1 class="rainbow" ><span>IPL Score Predictor</span></h1>
+<br>
+
+		<!-- Prediction Form -->
+		<div class="div2" >
+			<form action="{{ url_for('predict') }}" method="POST">
+				<!-- Batting Team Dropdown -->
+				<select class="form-input align-center" name="batting-team" id="ip4" style=font-weight:bold;background-color:silver>
+					<option value="none" style=font-weight:bold;color:blue;background-color:khaki>--- Select a Batting team ---</option>
+					<option value="Mumbai Indians" style=background-color:Blue;color:white>Mumbai Indians</option>
+					<option value="Kolkata Knight Riders" style=background-color:gold>Kolkata Knight Riders</option>
+					<option value="Chennai Super Kings" style=background-color:yellow>Chennai Super Kings</option>
+					<option value="Rajasthan Royals"style=background-color:lightblue>Rajasthan Royals</option>
+					<option value="Punjab Kings"style=background-color:pink>Punjab Kings</option>
+					<option value="Royal Challengers Bangalore"style=background-color:red>Royal Challengers Bangalore</option>
+					<option value="Delhi Capitals"style=background-color:purple;color:white>Delhi Capitals</option>
+					<option value="Sunrisers Hyderabad"style=background-color:orange>Sunrisers Hyderabad</option>
+				</select>
+				<br>
+				<br>
+				<!-- Bowling Team Dropdown -->
+				<select class="form-input align-center" name="bowling-team" id="ip4" style=font-weight:bold;background-color:silver>
+					<option value="none" style=font-weight:bold;color:blue;background-color:khaki>--- Select a Bowling team ---</option>
+					<option value="Mumbai Indians" style=background-color:Blue;color:white>Mumbai Indians</option>
+					<option value="Kolkata Knight Riders" style=background-color:gold>Kolkata Knight Riders</option>
+					<option value="Chennai Super Kings" style=background-color:yellow>Chennai Super Kings</option>
+					<option value="Rajasthan Royals"style=background-color:lightblue>Rajasthan Royals</option>
+					<option value="Punjab Kings"style=background-color:pink>Punjab Kings</option>
+					<option value="Royal Challengers Bangalore"style=background-color:red>Royal Challengers Bangalore</option>
+					<option value="Delhi Capitals"style=background-color:purple;color:white>Delhi Capitals</option>
+					<option value="Sunrisers Hyderabad"style=background-color:orange>Sunrisers Hyderabad</option>
+				</select>
+				<br>
+				<br>
+				<input class="form-input" type="text" name="overs" required="required" placeholder="Overs (>= 5.0) eg. 7.2" id="ip4" style=font-weight:bold><br><br>
+				<input class="form-input" type="text" name="runs" required="required" placeholder="Runs eg. 64" id="ip4" style=font-weight:bold><br><br>
+				<input class="form-input" type="text" name="wickets" required="required" placeholder="Wickets eg. 4" id="ip4" style=font-weight:bold><br><br>
+				<input class="form-input" type="text" name="runs_in_prev_5" required="required" placeholder="previous 5 Overs Runs eg.42" id="ip4" style=font-weight:bold><br><br>
+				<input class="form-input" type="text" name="wickets_in_prev_5" required="required" placeholder="previous 5 Overs Wickets" id="ip4" style=font-weight:bold><br><br><br>
+				<input type="submit" class="myButton" value="Predict Score" style=color:white;background-color:black;font-weight:bold>
+		</form>
+		</div>
+    </body>
+			<br><br>
+</html>

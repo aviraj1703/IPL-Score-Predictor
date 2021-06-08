@@ -1,0 +1,64 @@
+<html lang="en" dir="ltr">
+    <head>
+<style>
+		body
+	{
+		background-image : url("https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png");
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+	}
+        h2
+        {
+          color:green;
+          font-family:cambria;
+          font-weight:bold;
+          text-align : center;
+          text-decoration:underline;
+		  <!--background-color:lightblue;-->
+        }
+       .dh
+       {
+          text-align : center;
+          text-color:white;
+          font-size:25px;
+          font-family:sans;
+       }
+
+       a:focus{
+         color:yellow;
+       }
+
+       a:active {
+           color: #FF00CC
+        }
+        </style>
+        <meta charset="utf-8">
+        <title>First Innings Score Prediction</title>
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>First Innings Score Prediction</title>
+
+    </head>
+<br>
+
+<div class="dh ">
+<br><br>
+<h2 class="rainbow">IPL Score Predictor</h2>
+
+<br>
+			<div class="results" style=background-color:gray;color:pink;>
+
+
+				<h3 class='result-p'><b>The final predicted score (range): <span style=color:yellow;>{{ lower_limit }} to {{ upper_limit }}</span></b></h3>
+			</div>
+      <br><br>
+<p color="orange"><a href = "https://ipl-score-forecaster.herokuapp.com/" style = color:yellow;>Try again</a></p>
+    </body>
+</html>
